@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #1f2123;
+  color: #fff;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#a {
+  color: #fff;
+  font-size: 14px;
+}
+
+.navbar-brand img {
+  width: 10%;
+}
+
+.home-h1 {
+  font-size: 56px;
+}
+
+.properties-h1 {
+  font-size: 44px;
+}
+
+@media only screen and (max-width: 781px) {
+  .home-h1 {
+    font-size: 44px;
+  }
+  .properties-h1 {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .home-h1 {
+    font-size: 32px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .properties-h1 {
+    font-size: 24px;
+  }
+}
