@@ -21,59 +21,66 @@
     <!-- Style Sheet -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- FontAwesome Link -->
+    <script
+      src="https://kit.fontawesome.com/a642f85626.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="script.js"></script>
+
     <title>Simplenote</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark navbar-expand-md py-3 px-lg-5 px-md-3">
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-dark navbar-expand-md py-3 px-3 px-md-5">
       <div class="container-fluid" id="navbar">
         <a href="#" class="navbar-brand">
           <img
             src="https://simplenoteblog.files.wordpress.com/2020/07/logo.png"
-            alt="simplenote logo"
+            alt="simple-note logo"
           />
           Simplenote
         </a>
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="collapsibleNavbar"
-        >
-          <ul class="navbar-nav d-lg-none">
-            <li class="nav-item">
+        <!-- Dropdown menu only shows in small screen -->
+        <div class="dropdown-menu-end d-lg-none">
+          <ul
+            class="dropdown-menu dropdown-menu-dark dropdown-menu-end shadow px-3 py-2 me-5"
+          >
+            <li class="nav-item my-2">
               <a href="#" class="nav-link">Contact Us</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item my-2">
               <a href="#" class="nav-link">Help</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item my-2">
               <a href="#" class="nav-link">Support Forum</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item my-2">
               <a href="#" class="nav-link">Blog</a>
             </li>
-            <div class="vr mx-3"></div>
-            <li class="nav-item">
+            <!-- <div class="vr mx-3"></div> -->
+            <li class="nav-item my-2">
               <a href="#" class="nav-link">Log In</a>
             </li>
-            <li class="nav-item">
-              <a
-                href="#"
-                class="nav-link border border-opacity-10 rounded px-3 py-2"
-                >Sign Up</a
-              >
+            <li class="nav-item my-2">
+              <a href="#" class="nav-link">Sign Up</a>
             </li>
           </ul>
         </div>
 
+        <!-- Dropdown toggle button -->
+        <button
+          class="d-lg-none toggle-button"
+          type="button"
+          data-bs-toggle="dropdown"
+          onclick="toggleNavIcon()"
+        >
+          <i id="toggle-nav-icon" class="fas fa-bars"></i>
+        </button>
+        <!-- normal navbar shows in only large screen -->
         <ul class="navbar-nav ms-auto d-none d-lg-flex">
           <li class="nav-item">
             <a href="#" class="nav-link">Contact Us</a>
@@ -104,14 +111,14 @@
 
     <!-- Home -->
     <section>
-      <div class="container-fluid text-center pt-5 mt-5">
+      <div class="container-fluid text-center pt-5 mt-lg-5">
         <h1 class="home-h1">
           The simplest way to <br />
           keep notes
         </h1>
         <p class="py-2">
           All your notes, synced on all your devices. Get Simplenote now for
-          iOS, <br />
+          iOS, <br class="d-none" />
           Android, Mac, Windows, Linux, or in your browser
         </p>
         <button class="btn btn-primary">Sign up now</button>
@@ -128,13 +135,258 @@
     <!-- Properties -->
 
     <section>
-      <div class="container-fluid text-center mt-5">
-        <h1 class="properties-h1">
+      <div class="container-lg mt-5">
+        <h1 class="properties-h1 text-center">
           Comprehensive underneath,<br />
           simple on the surface
         </h1>
-        <div></div>
+
+        <!-- Properties Grid -->
+        <div class="row w-75 mx-auto g-lg-5 mt-5 prop-divs">
+          <div class="col-sm-4 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2020/07/ic_cloud-sync.png?w=32&zoom=2"
+                alt="Cloud Icon"
+                class="properties-img"
+              />
+              <h4>Use it everywhere</h4>
+            </div>
+            <p class="properties-p">
+              Notes stay updated across all your devices, automatically and in
+              real time. There's no “sync” button: It just works.
+            </p>
+          </div>
+          <div class="col-sm-4 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2020/07/ic_tags.png?w=32&zoom=2"
+                alt="Cloud Icon"
+                class="properties-img"
+              />
+              <h4>Stay organized</h4>
+            </div>
+            <p class="properties-p">
+              Add tags to find notes quickly with instant searching.
+            </p>
+          </div>
+          <div class="col-sm-4 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2020/07/ic_collaborate.png?w=32&zoom=2"
+                alt="Cloud Icon"
+                class="properties-img"
+              />
+              <h4>Work Together</h4>
+            </div>
+            <p class="properties-p">
+              Share a to-do list, post some instructions, or publish your notes
+              online.
+            </p>
+          </div>
+          <div class="col-sm-4 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2020/07/ic_history.png?w=32&zoom=2"
+                alt="Cloud Icon"
+                class="properties-img"
+              />
+              <h4>Go back in time</h4>
+            </div>
+            <p class="properties-p">
+              Notes are backed up with every change, so you can see what you
+              noted last week or last month.
+            </p>
+          </div>
+          <div class="col-sm-4 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2020/07/ic_notes.png?w=32&zoom=2"
+                alt="Cloud Icon"
+                class="properties-img"
+              />
+              <h4>Markdown support</h4>
+            </div>
+            <p class="properties-p">
+              Write, preview, and publish your notes in Markdown format.
+            </p>
+          </div>
+          <div class="col-sm-4 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2020/07/ic_info.png?w=32&zoom=2"
+                alt="Cloud Icon"
+                class="properties-img"
+              />
+              <h4>It's Free</h4>
+            </div>
+            <p class="properties-p">
+              Apps, backups, syncing, sharing - it's all completely free.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Horizontal Line under properties -->
+    <hr class="w-75 mx-auto" />
+
+    <!-- Peoples Comment about Simplenote -->
+    <section>
+      <div class="container-lg mt-5">
+        <h1 class="text-center">What people are saying</h1>
+        <div class="row w-75 px-lg-5 mx-auto mt-5">
+          <div class="col-sm-4 my-2 my-lg-0">
+            <div class="border-start border-4 ps-3 give-color-border">
+              <h5>If you're not using Simplenote, you're missing out.</h5>
+              <p class="people-p my-4 my-lg-0">TechCrunch</p>
+            </div>
+          </div>
+          <div class="col-sm-4 my-2 my-lg-0">
+            <div class="border-start border-4 ps-3 give-color-border">
+              <h5>
+                If you're looking for a cross-platform note-taking tool with
+                just enough frills, it's hard to look beyond Simplenote.
+              </h5>
+              <p class="people-p my-4 my-lg-0">MacWorld</p>
+            </div>
+          </div>
+          <div class="col-sm-4 my-2 my-lg-0">
+            <div class="border-start border-4 ps-3 give-color-border">
+              <h5>
+                If you want a truly distraction-free environment then you can't
+                do better than Simplenote for your note-taking needs.
+              </h5>
+              <p class="people-p my-4 my-lg-0">TechCrunch</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horizontal Line under comments -->
+    <hr class="w-75 mx-auto" />
+
+    <!-- Download Links -->
+    <section>
+      <div class="container-fluid mt-5 px-5">
+        <div class="text-center">
+          <h1>Available on all your devices</h1>
+          <p>
+            Download Simplenote for any device and stay in sync - all the time,
+            everywhere.
+          </p>
+        </div>
+        <div class="row mx-auto mt-3 g-4">
+          <div
+            class="col-lg-3 col-12 me-lg-4 ms-lg-auto d-flex align-items-center link-card px-3 rounded border"
+          >
+            <div>
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2010/01/ic-app-store-mac.png"
+                alt="Apple Logo"
+                class="link-img"
+              />
+            </div>
+            <div class="pt-2">
+              Download on the
+              <h5>App Store</h5>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-12 me-lg-auto d-flex align-items-center link-card px-3 rounded border"
+          >
+            <div>
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2010/01/ic-app-store-mac.png"
+                alt="Apple Logo"
+                class="link-img"
+              />
+            </div>
+            <div>
+              Download on the
+              <h5>Mac App Store</h5>
+            </div>
+          </div>
+        </div>
+        <div class="row mx-auto mt-3 g-4">
+          <div
+            class="col-lg-3 col-12 me-lg-4 ms-lg-auto d-flex align-items-center link-card px-3 rounded border"
+          >
+            <div>
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2010/01/ic-play-store.png"
+                alt="Play Store Icon"
+                class="link-img"
+              />
+            </div>
+            <div class="pt-2">
+              Download on the
+              <h5>Play Store</h5>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-12 me-lg-auto d-flex align-items-center link-card px-3 rounded border"
+          >
+            <div>
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2020/07/ic-windows.png"
+                alt="Microsoft Logo"
+                class="link-img"
+              />
+            </div>
+            <div>
+              Download on the
+              <h5>Windows Store</h5>
+            </div>
+          </div>
+        </div>
+        <div class="row mx-auto mt-3 g-4">
+          <div
+            class="col-lg-3 col-12 me-lg-4 ms-lg-auto d-flex align-items-center link-card px-3 rounded border"
+          >
+            <div>
+              <img
+                src="https://simplenoteblog.files.wordpress.com/2020/07/ic-linux.png"
+                alt="Apple Logo"
+                class="link-img"
+              />
+            </div>
+            <div class="pt-2">
+              Download for
+              <h5>Linux</h5>
+            </div>
+          </div>
+          <div
+            class="col-lg-3 col-12 me-lg-auto d-flex align-items-center"
+          ></div>
+        </div>
+
+        <div class="text-center mt-3 mb-5">
+          <a href="#">Other Downloads</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container-fluid row w-75 mx-auto">
+        <ul class="list-inline col-sm-10 text-center mt-3">
+          <li class="list-inline-item footer-li">Contact Us</li>
+          <li class="list-inline-item footer-li">Help</li>
+          <li class="list-inline-item footer-li">Blog</li>
+          <li class="list-inline-item footer-li">Developers</li>
+          <li class="list-inline-item footer-li">Terms & Condition</li>
+          <li class="list-inline-item footer-li">Privacy</li>
+          <li class="list-inline-item footer-li">Press</li>
+          <li class="list-inline-item footer-li">
+            Privacy Notice for California Users
+          </li>
+        </ul>
+        <ul class="col-sm-2 text-center mt-3">
+          <li class="list-inline-item">© Automattic</li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

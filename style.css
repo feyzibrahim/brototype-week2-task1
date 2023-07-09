@@ -8,6 +8,11 @@ h1 {
   font-weight: 700;
 }
 
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 p {
   font-size: 18px;
   font-weight: 400;
@@ -22,12 +27,70 @@ p {
   width: 10%;
 }
 
+#toggle-nav-icon {
+  color: #007aff;
+}
+
+.fa-bars {
+  transform: scale(1.5, 1);
+}
+
+.fa-close {
+  font-size: 20px;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+}
+
 .home-h1 {
   font-size: 56px;
 }
 
 .properties-h1 {
   font-size: 44px;
+}
+
+.properties-img {
+  width: 9%;
+  margin-right: 10px;
+}
+
+.properties-p {
+  color: #8c8f94;
+  font-size: 16px;
+}
+
+.people-p {
+  font-size: 16px;
+  color: #8c8f94;
+  font-style: italic;
+}
+
+.give-color-border {
+  border-color: #3a3c3e !important;
+}
+
+.link-card {
+  background-color: #323436;
+  /* width: 30%; */
+}
+
+.link-card:hover {
+  background-color: #43474a;
+}
+
+.link-img {
+  width: 50%;
+}
+
+.list-inline-item {
+  font-size: 14px;
+}
+
+.footer-li:hover {
+  color: #43474a;
 }
 
 @media only screen and (max-width: 781px) {
@@ -50,5 +113,14 @@ p {
 
   .properties-h1 {
     font-size: 24px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .prop-divs {
+    width: 100%;
   }
 }
